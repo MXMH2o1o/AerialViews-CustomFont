@@ -355,10 +355,12 @@
     <string-array name="text_font_entries" translatable="false">
         <item>Open Sans*</item>
         <item>Roboto</item>
+        <item>MiSans (By MXH)</item>
     </string-array>
     <string-array name="text_font_values" translatable="false">
         <item>open-sans</item>
         <item>sans-serif</item>
+        <item>mi-sans</item>
     </string-array>
     <string name="text_font_default" translatable="false">open-sans</string>
 

@@ -26,14 +26,14 @@ object FontHelper {
     ): Typeface {
         val font =
             try {
-                if (typeface == "open-sans") {
-                    ResourcesCompat.getFont(context, R.font.opensans)
-                } else {
-                    Typeface.create("san-serif", Typeface.NORMAL)
+                when (typeface) {
+                    "open-sans" -> ResourcesCompat.getFont(context, R.font.opensans)
+                    "mi-sans" -> ResourcesCompat.getFont(context, R.font.misans)
+                    else -> Typeface.create("sans-serif", Typeface.NORMAL)
                 }
             } catch (ex: Exception) {
                 Timber.e(ex)
-                Typeface.create("san-serif", Typeface.NORMAL)
+                Typeface.create("sans-serif", Typeface.NORMAL)
             }
         return TypefaceCompat.create(context, font, weight, false)
     }
